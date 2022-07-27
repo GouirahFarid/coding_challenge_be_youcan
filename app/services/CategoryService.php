@@ -19,7 +19,6 @@ class CategoryService extends BaseService implements CategoryServiceInterface
     {
         return $this->baseRepository->getByName($name);
     }
-
     public function getCategoriesNames()
     {
         return $this->baseRepository->getCategoriesNames();

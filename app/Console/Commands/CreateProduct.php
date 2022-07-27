@@ -28,7 +28,7 @@ class CreateProduct extends Command
         $description = $this->ask('What is  the product description?');
         $price = $this->ask('What is  the product price?');
         $image = $this->ask('Add product image url');
-        $categories=$categoryService->getCategoriesNames();
+        $categories=$categoryService->getNames();
         $SelectedCategories=[];
         if (count($categories)>0){
             array_unshift($categories,'no category(default)');

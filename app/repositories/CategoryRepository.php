@@ -38,10 +38,6 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
 
     }
 
-    public function getByName($name)
-    {
-        return  Category::where('name',$name)->first();
-    }
 
     public function getCategoriesNames()
     {

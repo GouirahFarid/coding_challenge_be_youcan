@@ -31,4 +31,14 @@ class BaseService implements EloquentServiceInterface
     {
         return $this->baseRepository->all();
     }
+
+    public function getNames()
+    {
+        return $this->baseRepository->getNames();
+    }
+
+    public function getByName($name)
+    {
+        return $this->baseRepository->getByName($name);
+    }
 }

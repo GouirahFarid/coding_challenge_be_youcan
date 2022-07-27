@@ -16,7 +16,7 @@ class CreateCategory extends Command
     public function handle(CategoryServiceInterface $categoryService)
     {
         $name = $this->ask('What is  the category name?');
-        $categories=$categoryService->getCategoriesNames();
+        $categories=$categoryService->getNames();
         $category=null;
         if (count($categories)>0){
             array_unshift($categories,'no parent(default)');

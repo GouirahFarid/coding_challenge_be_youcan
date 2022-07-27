@@ -2,31 +2,33 @@
 
 namespace App\Console\Commands;
 
+use App\services\ProductServiceInterface;
 use Illuminate\Console\Command;
 
 class DeleteProduct extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'command:name';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Command description';
+    protected $signature = 'delete:product';
 
-    /**
-     * Execute the console command.
-     *
-     * @return int
-     */
-    public function handle()
+    protected $description = 'Delete Product';
+
+    public function handle(ProductServiceInterface  $productService)
     {
-        return 0;
+        $products = $productService->getNames();
+        if (count($products)>0){
+            array_unshift($products, 'no one(default)');
+            $choice = $this->choice(
+                'Witch product you wanna delete?',
+                $products,
+                0,
+                $maxAttempts = null,
+                $allowMultipleSelections = false
+            );
+            $product = $productService->getByName($choice);
+            if ($product)
+                $productService->delete($product->id);
+        }else{
+            $this->info('there is no product right now');
+        }
     }
 }

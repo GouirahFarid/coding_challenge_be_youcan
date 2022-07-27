@@ -12,4 +12,6 @@ interface EloquentRepositoryInterface
     public  function create(array $attributes):Model;
     public  function delete($id);
     public function all():Collection;
+    public  function getNames();
+    public  function getByName($name);
 }

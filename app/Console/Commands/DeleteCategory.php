@@ -28,7 +28,7 @@ class DeleteCategory extends Command
         if (count($categories)>0){
             array_unshift($categories, 'no one(default)');
             $choice = $this->choice(
-                'who is the parent of this category',
+                'Witch Category you wanna delete?',
                 $categories,
                 0,
                 $maxAttempts = null,
@@ -36,7 +36,7 @@ class DeleteCategory extends Command
             );
             $category = $categoryService->getByName($choice);
             if ($category)
-                $category->delete();
+                $categoryService->delete($category->id);
         }else{
             $this->info('there is no category right now');
         }
