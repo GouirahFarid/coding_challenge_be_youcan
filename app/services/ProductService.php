@@ -30,6 +30,8 @@ class ProductService extends BaseService implements ProductServiceInterface
             $path = $attributes['image']->store('public/products/images');
         }
         $attributes['image']=$path;
+        if (isset($attributes['categories'])&& is_string($attributes['categories']))
+            $attributes['categories']=explode(',',$attributes['categories']);
         return parent::create($attributes);
     }
 }

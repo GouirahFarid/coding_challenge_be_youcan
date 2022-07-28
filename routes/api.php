@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
  Route::prefix('categories')->group(function (){
      Route::post('',[\App\Http\Controllers\CategoryController::class,'create']);
      Route::get('',[\App\Http\Controllers\CategoryController::class,'all']);
