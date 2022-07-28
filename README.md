@@ -1,6 +1,8 @@
 
 
 # Youcan tech-challenge By Faid Gouirah
+
+
 ## Stack Used
 - [PHP version 8](https://www.php.net/)
 - [Laravel  version 9](https://laravel.com/)
@@ -13,7 +15,7 @@
 - Clone GitHub repository in your local machine using command ```git clone https://github.com/GouirahFarid/coding_challenge_be_youcan.git``` or download it
 - remained file ``.env.example`` to``.env``
   
-- Inside project folder run ``php artisan install`` command and after that run ``php artisan key:generate``
+- Inside project folder run ``composer install`` command and after that run ``php artisan key:generate``
 - create a database and add it into   ``.env`` File
 - Inside project folder run ``php artisan migrate`` and make sure migrations files are migrated and database tables are created successfully
 -Inside project folder  run ``npm   install & npm run dev``
