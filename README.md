@@ -1,7 +1,7 @@
 
 
-## Youcan tech-challenge By Faid Gouirah
-### Stack Used
+# Youcan tech-challenge By Faid Gouirah
+## Stack Used
 - [PHP version 8](https://www.php.net/)
 - [Laravel  version 9](https://laravel.com/)
 - [MySQL](https://www.mysql.com/)
@@ -9,7 +9,7 @@
 - [Vue.js version 3](https://vuejs.org/)
 - [Git](https://git-scm.com/)
 
-### Installation process
+## Installation process
 - Clone GitHub repository in your local machine using command ```git clone https://github.com/GouirahFarid/coding_challenge_be_youcan.git``` or download it
 - remained file ``.env.example`` to``.env``
   
